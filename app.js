@@ -50,9 +50,11 @@ var app = {
               return this._todos[id].isDone === false;
             }).length;
 
-            document.querySelector("#list-todo").$components = showTodos(
+            document.querySelector("#list-todo").$components = Object.keys(
               this._todos
-            );
+            ).map(key => {
+              return listTodoItem({ id: key, data: this._todos[key] });
+            });
 
             document.querySelector("#footer__active").$update();
             document.querySelector("#footer__completed").$update();
@@ -106,7 +108,6 @@ var app = {
               $update: function() {
                 var todoNum = document.querySelector("#lists")._todoNum;
                 var undoneNum = document.querySelector("#lists")._undoneNum;
-                console.log(todoNum);
                 if (undoneNum || todoNum) {
                   this.$text = `${undoneNum} ${undoneNum === 1
                     ? "item"
@@ -176,10 +177,4 @@ var listTodoItem = function(item) {
       }
     ]
   };
-};
-
-var showTodos = todos => {
-  return Object.keys(todos).map(key => {
-    return listTodoItem({ id: key, data: todos[key] });
-  });
 };
