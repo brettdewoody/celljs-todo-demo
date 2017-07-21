@@ -138,6 +138,15 @@ var app = {
           ]
         }
       ]
+    },
+    {
+      $type: "div",
+      $html: `<p class="p--small p--centered">
+          Demo app built by <a href="https://brettdewoody.com">Brett DeWoody</a> using <a href="https://www.celljs.org/">cellJS</a>.
+        </p>
+        <p class="p--small p--centered">
+          Source available on <a href="https://github.com/brettdewoody/celljs-todo-demo">Github</a>.
+        </p>`
     }
   ]
 };
