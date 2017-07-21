@@ -24,7 +24,7 @@ var app = {
           type: "text",
           placeholder: "What needs to be done?",
           $init: function(e) {
-            /*this.focus()*/
+            this.focus();
           },
           onkeyup: function(e) {
             if (e.keyCode === 13) {
