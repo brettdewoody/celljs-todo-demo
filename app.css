@@ -135,7 +135,7 @@ body {
 header {
   background-color: rgb(245, 245, 245);
   text-align: center;
-  font-size: 3vw;
+  font-size: 24px;
   font-weight: 200;
   margin-bottom: 0.5rem;
   color: rgb(200, 200, 200);
@@ -143,9 +143,10 @@ header {
 
 #app {
   font-size: 16px;
-  width: 90%;
+  width: 96%;
   box-sizing: border-box;
-  max-width: 500px;
+  max-width: 660px;
+  min-width: 260px;
   margin: 0 auto;
   color: #333333;
 }
@@ -187,8 +188,9 @@ p {
   outline: none;
   font-size: 20px;
   line-height: 40px;
-  padding: 0 10px;
+  padding: 10px 10px;
   box-sizing: border-box;
+  margin: 0;
   border: none;
   border-bottom: 1px solid rgb(245, 245, 245);
 }
@@ -210,7 +212,7 @@ p {
   width: 100%;
   display: flex;
   font-size: 20px;
-  padding: 0 10px;
+  padding: 5px 10px;
   line-height: 40px;
   box-sizing: border-box;
   border-bottom: 1px solid rgb(245, 245, 245);
@@ -265,6 +267,10 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
+  header {
+    font-size: 4vw;
+  }
+
   .lists__container {
     display: flex;
   }
@@ -275,5 +281,12 @@ footer {
 
   .link__delete {
     display: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .list__item .link__delete {
+    display: block;
+    color: rgb(172, 41, 0);
   }
 }
